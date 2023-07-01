@@ -21,10 +21,7 @@ except ImportError:
 # TODO: can this be simplified or removed since the switch to setuptools
 # away from numpy.distutils?
 builtins.__SKLEARN_SETUP__ = True
-
-
 DISTNAME = "scikit-learn"
-DESCRIPTION = "A set of python modules for machine learning and data mining"
 with open("README.rst") as f:
     LONG_DESCRIPTION = f.read()
 MAINTAINER = "Andreas Mueller"
