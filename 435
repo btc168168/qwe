@@ -1,0 +1,20 @@
+import sys
+from tqdm import tqdm
+import torch.nn.functional as F
+
+
+import io
+
+
+class DefaultCompressor:
+    """for non-neural-based compressor"""
+    def __init__(self, compressor, typ='text'):
+        if compressor == 'gzip':
+            self.compressor = gzip
+        elif compressor == 'bz2':
+            self.compressor = bz2
+        elif compressor == 'lzma':
+            self.compressor = lzma
+        else:
+            raise RuntimeError("Unsupported compressor")
+        self.type = typ
