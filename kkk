@@ -18,7 +18,6 @@ except ImportError:
 # This is a bit (!) hackish: we are setting a global variable so that the main
 # sklearn __init__ can detect if it is being loaded by the setup routine, to
 # avoid attempting to load components that aren't built yet.
-# TODO: can this be simplified or removed since the switch to setuptools
 # away from numpy.distutils?
 builtins.__SKLEARN_SETUP__ = True
 DISTNAME = "scikit-learn"
